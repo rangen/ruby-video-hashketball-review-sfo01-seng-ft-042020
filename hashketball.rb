@@ -60,7 +60,7 @@ def player_stats(player_name)
 
   stats.each_pair {|x, team|
         team[:players].each {|player|
-          return player.reject{|h| h == :player_name} if player[:player_name] == player_name
+          return player if player[:player_name] == player_name
         }
   }
 end
